@@ -33,7 +33,7 @@ class ratingsdata:
     def rated_ijs(self):
         userdic = self.ui_to_n
         recdic = self.ri_to_n
-        return [(userdic[ij[0]],recidc[ij[1]]) for ij in self.df.index]
+        return [(userdic[ij[0]],recdic[ij[1]]) for ij in self.df.index]
 
 
         
