@@ -34,3 +34,16 @@ Two of these categories (nutrition, cooktime) represent continuous data in a non
 
 To start, we should try to split the keywords up into categories and do some EDA to determine which ones we think we want to include in the model.
 
+## Usage
+
+#### Data sources
+Our raw data files (`recipes.parquet` and `reviews.parquet`) have been managed using [GitHub File Large System (FLS)](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github). This means that GitHub has a reference to the files rather than hosting the files themselves. Hence, in order to access to the files (for example, loding them with `pandas`) you need to set up Git LFS in your machine so that your computer knows what to do with the GitHub provided reference. Once you have the setup ready, there won't be need to deal with Git FLS unless you are trying to modify the raw data or if you are trying to push a new large file into GitHub.
+
+__Git FLS setup__
+
+Check if you have `git lfs` installed in your machine by running `git lfs version` in your terminal. In case you don't have it yet, you can follow the instructions [here](https://docs.github.com/en/repositories/working-with-files/managing-large-files/installing-git-large-file-storage) to install it. Once it is installed, run `git lfs install` to activate it. This will enable the Git LFS functionality globally. After that, any repository you interact with on that system will have Git LFS enabled. 
+
+Finally, to be able to read `parquet` files using `pandas` we need to install the [pyarrow](https://arrow.apache.org/docs/python/install.html) or [fastparquet](https://pypi.org/project/fastparquet/) python libraries. To install the first one you can use the command below in your terminal. Make sure you have your project virtual environment.
+```
+conda install -c conda-forge pyarrow
+```
