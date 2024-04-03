@@ -2,6 +2,8 @@
 
 The goal of this repository is to construct a recommender for recipes using [this data](https://www.kaggle.com/datasets/irkaal/foodcom-recipes-and-reviews).
 
+Check out the following [Google doc](https://docs.google.com/document/d/1g9nbbayHCMfXY_VRnYjjl4JoBdCZdtHc21K-4ppf6K8/edit) where we try to update the status of the project (what is being done, what needs to be done, comments, etc). Feel free to edit this if you are member of the team :)
+
 ## General Framework
 
 We have a list of users $U$ and a list of recipes $R$.
