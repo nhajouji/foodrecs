@@ -14,12 +14,20 @@
                 <form method="POST">
                     
                         <label>Title</label>
-                        <input type="text" class="form-control" placeholder="Enter Text" name="search" size=50 required>
-                    
+                        {% if query %}
+                        <input type="text" class="form-control" placeholder="{{query}}" name="query" size=50 required>
+                        {% else %}
+                        <input type="text" class="form-control" placeholder="Enter Text" name="query" size=50 required>
+                        {% endif %}
+
                     <button type="submit" class="btn btn-primary">Find Recipes!</button>
                 </form>
-            {% for word in search %}
-            <p>{{word}}</p>
+            {% for result in results_dictionary %}
+            <div class="recipe">
+                <a style="font-size: 16pt;">{{result.name}};</a>
+                <br>
+                <a>{{result.description}}</a>
+            </div>
             {% endfor %}
         </div>
     </div>

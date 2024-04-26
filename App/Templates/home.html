@@ -12,13 +12,13 @@
                 </p>
                 <table class="table">
                     <tr>
-                        <th style="width: 10%;">Food name</th>
-                        <th style="width: 10%;">Food type</th>
+                        <th style="width: 10%;">Recipe Name</th>
+                        <th style="width: 10%;">Recipe Region</th>
                     </tr>
-                    {% for food in foods %}
+                    {% for recipe in recipes %}
                     <tr>
-                        <td>{{food.name}}</td>
-                        <td>{{food.type}}</td>
+                        <td style="padding: 13px;">{{recipe.name}}</td>
+                        <td>{{recipe.regions}}</td>
                     </tr>
                     {% endfor %}
                 </table>

@@ -1,53 +1,63 @@
 body {
-    background-color: black;
-    font-family: sans-serif;
-    padding: 20px;
-    color:blanchedalmond;
-  }
+  background-color: black;
+  font-family: sans-serif;
+  padding: 20px;
+  color:blanchedalmond;
+}
+
+.scenery {
+background-image: url(https://bestinsingapore.com/wp-content/uploads/2021/05/10655394_1157694777574019_3281093576455971223_o-1-1536x1280.jpg);
+width: 100%;
+max-width: 1530px;
+height: 100%;
+max-height: 1200px;
+margin-left: auto;
+margin-right: auto;
   
- .scenery {
-  background-image: url(https://bestinsingapore.com/wp-content/uploads/2021/05/10655394_1157694777574019_3281093576455971223_o-1-1536x1280.jpg);
-  width: 100%;
-  max-width: 1530px;
-  height: 100%;
-  max-height: 1200px;
+}
+
+.table_div {
+  color: burlywood;
+  width: 80%;
+  background-color: #270e07;
   margin-left: auto;
   margin-right: auto;
-    
- }
-  
- .table_div {
-    color: brown;
-    width: 80%;
-    background-color: burlywood;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: auto;
-    margin-bottom: auto;
-    padding: 20px;
-    max-width: 500px;
-    border-radius: 10px;
-  }
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 20px;
+  max-width: 500px;
+  border-radius: 10px;
+}
 
- .table {
-  background: black; 
-  padding: 5px; 
-  border-radius: 5px;
- } 
+.table {
+background: black; 
+padding: 5px; 
+border-radius: 5px;
+} 
+
+.recipe {
+background: burlywood; 
+color: brown; 
+border-color: black; 
+border-width: 10px; 
+padding: 2px 4px 2px 6px; 
+margin: 12px 0px 12px 0px; 
+border-radius: 4px
+}
 
 
 tr {
-  border-bottom: 1px solid black; /* Line between rows */
+border-bottom: 1px solid black; /* Line between rows */
 }
 td {
-  border-right: 1px solid black; /* Line between columns */
+border-right: 1px solid black; /* Line between columns */
 }
 /* Optional: Remove border from last row and last column */
 tr:last-child {
-  border-bottom: none;
+border-bottom: none;
 }
 td:last-child {
-  border-right: none;
+border-right: none;
 }
 
 
