@@ -1,8 +1,54 @@
-# Food recommender
+[A relatable problem](https://www.youtube.com/watch?v=6edlBZ64TDk)
 
-The goal of this repository is to construct a recommender for recipes using [this data](https://www.kaggle.com/datasets/irkaal/foodcom-recipes-and-reviews).
+# Recipe recommender
 
-Check out the following [Google doc](https://docs.google.com/document/d/1g9nbbayHCMfXY_VRnYjjl4JoBdCZdtHc21K-4ppf6K8/edit) where we try to update the status of the project (what is being done, what needs to be done, comments, etc). Feel free to edit this if you are member of the team :)
+We set out to construct a recommendation engine that suggests recipes using [this data](https://www.kaggle.com/datasets/irkaal/foodcom-recipes-and-reviews). 
+
+* We succeeded!
+* But not everything we tried worked.
+
+This repository contains our main results.
+
+### Second repository 
+The dataset we started with exceeds GitHub's size limits.
+* We originally tried to get around this using GitLFS, but ran out of bandwidth.
+* This repository contains the cleaned data we need for modeling purposes, and notebooks explaining how we obtained the clean data from the original data. To run the data cleaning notebooks, one would also need to download the original datasets from Kaggle, or clone our second repository on huggingface.
+
+## Introduction 
+### Data
+
+We started off with two datasets:
+* A dataset with recipe features - each entry corresponds to one of the recipes, and contains information like the ingredient list, cooking instructions, cook time, nutrtion, etc.
+* A dataset with reviews. Each entry has an associated reviewer (that we call "the user") and recipe, and includes a numerical rating (between 0 and 5), a review, and some additional metadata.
+
+ Our goal is to take this data, and somehow characterize the set of recipes that we think each user is likely to interact with. 
+
+
+### Concrete Problem
+
+For each user, we want a ranking of the recipe list that is catered to that users preferences.
+
+* To obtain such a ranking, we want a function $f : U \times R \to \mathbb{R}$ (here $U$ is the set of users, $R$ the set of recipes and $\mathbb{R}$ the set of real numbers) that captures each user's preferences: the idea is if $f(u, r) < f(u,r')$, then we rank $r'$ higher than $r$ for user $u$.
+* One way we can obtain such an $f$ is by finding embeddings of $U, R$ into a vector space, and defining $f(u,r)$ to be the dot product of the vectors associated to $u,r$.
+
+Now, it is not hard to write a map from a set to a vector space - so we need to make sure our embeddings actually capture the user's preferences somehow. 
+Here is how that's going to work:
+* We do a train-test split of the review dataset, stratifying by user so that we can make predictions for each user.
+* We use the training portion of the review dataset, together with the full recipe dataset, to obtain embeddings $U \to V$ and $R \to V$.
+Once we have these embeddings, we can compute $f(u,r)$ for any user-recipe pair. 
+
+We will compare the mean scores assigned to user-recipe pairs that were in the holdout set, to the mean value of $f$. 
+* The "effectiveness" of $f$ does not change if we rescale $f$ by a positive number - the rankings will be the same either way.
+* To ensure the scores of our models are comparable, we will scale $f$ so that the mean score given to user-recipe pairs in the training set is 1.
+
+The process is summarized in the following picture:
+
+
+
+## Obtaining Models
+
+
+
 
 ## General Framework
 
