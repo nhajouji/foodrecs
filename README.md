@@ -4,15 +4,15 @@
 
 We set out to construct a recommendation engine that suggests recipes for a user based on things we can learn from [this data](https://www.kaggle.com/datasets/irkaal/foodcom-recipes-and-reviews). 
 
-* We succeeded!
-* But not everything we tried worked.
+* We succeeded in creating an engine that does what we want!
+* Not everything we tried along the way worked.
 
 This repository contains our main results.
 
 #### Minor Note
 The dataset we started with exceeds GitHub's size limits. We originally tried to get around this using GitLFS, but ran out of bandwidth.
 
-This repository contains the cleaned data we need for modeling purposes, and notebooks explaining how we obtained the clean data from the original data. To run the data cleaning notebooks, one would also need to download the original datasets from Kaggle, or clone our second repository on huggingface.
+This repository contains the cleaned data we need for modeling purposes, and notebooks explaining how we obtained the clean data from the original data. To run the data cleaning notebooks, one would also need to download the original datasets from Kaggle, or clone our [second repository on huggingface](https://huggingface.co/erdos-sp-2024-foodrecs/food-recs).
 
 
 ## Introduction 
