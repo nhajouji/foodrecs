@@ -44,11 +44,12 @@ We will compare the mean scores assigned to user-recipe pairs that were in the h
 
 The process is summarized in the following picture:
 
+(add picture)
 
 
 ## Obtaining our Model
 
-To obtain our model, we used what is becoming a standard tool in recommender systems: a matrix factorization, obtained from the singular value decomposition of an affinity matrix.
+To obtain our model, we used what is becoming a standard tool in recommender systems: a matrix factorization, obtained from the singular value decomposition of an affinity matrix. Note that this only requires the review dataset, not the recipe dataset.
 
 1. First, we encode the training portion of our review data into an "affinity matrix": each row corresponds to a user, each column to a recipe, each entry is 0 or 1, with a 1 indicating that a user has reviewed a recipe. Let's call this matrix $M'$. Note that $M'$ is an $m \times n$ matrix, where $m$ is the number of users and $n$ the number of recipes.
 2. We obtain a normalized version of $M'$ by subtracting the mean value of each row from that row, so the rows have mean 0. Call this matrix $M$. 
@@ -66,8 +67,6 @@ The hope is that when we pass to these lower rank factorizations, the scores for
 
 This is exactly what we saw when we did our cross validation.
 (See the SVD notebook in the "Models" folder for details.)
-
-
 
 ### Final Model
 
@@ -89,3 +88,5 @@ There are various ways of playing around with the final model to see what it's a
 ## User Interface
 
 Most people are not going to open up a Jupyter notebook to figure out what they're going to buy from the grocery store. Consequently, we designed a web interface based that generates suggestions based on both a query and a user history. We used a sentence transformer to convert both the query and the recipe descriptions into vectors, and then assigned to each recipe a weighted score of the query dot product and the SVD dot product.
+
+(add picture)
