@@ -44,7 +44,7 @@ We will compare the mean scores assigned to user-recipe pairs that were in the h
 
 The process is summarized in the following picture:
 
-(add picture)
+![ModelPipeline](https://github.com/nhajouji/foodrecs/assets/96888276/b98417a5-befc-4e2f-813d-b13abc46d771)
 
 
 ## Obtaining our Model
@@ -84,6 +84,8 @@ There are various ways of playing around with the final model to see what it's a
 
 * We can visualize the recipe space by plotting the SVD vectors in $\mathbb{R}^2$.
 * Our main goal is to obtain rankings of the recipes that are catered to the tastes of a given user; however, we can just as easily use our model to rank recipes based on how similar they are to a given recipe.
+
+![IWantSteak](https://github.com/nhajouji/foodrecs/assets/96888276/ff0e5c4b-4e76-4ddf-9882-14b204145137)
 
 ## User Interface
 
