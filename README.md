@@ -97,4 +97,5 @@ Recommendations
 
 User-tuned Search
 
-![AppPhoto2](https://github.com/nhajouji/foodrecs/assets/96888276/0407232a-483a-4453-9b6b-e36211199508)
+![AppPhoto2](https://github.com/nhajouji/foodrecs/assets/96888276/99d186c2-da03-40eb-a144-4b4f278c5903)
+
