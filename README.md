@@ -89,4 +89,10 @@ There are various ways of playing around with the final model to see what it's a
 
 Most people are not going to open up a Jupyter notebook to figure out what they're going to buy from the grocery store. Consequently, we designed a web interface that generates suggestions based on both a query and a user history. We used a sentence transformer to convert both the query and the recipe descriptions into vectors, and then assigned to each recipe a weighted score of the query dot product and the SVD dot product.
 
+Recommendations
+
 ![AppPhoto1](https://github.com/nhajouji/foodrecs/assets/96888276/eff201ad-fd8e-44c1-9d16-c4206a95c955)
+
+User-tuned Search
+
+![AppPhoto2](https://github.com/nhajouji/foodrecs/assets/96888276/0407232a-483a-4453-9b6b-e36211199508)
