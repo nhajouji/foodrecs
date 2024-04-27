@@ -87,6 +87,5 @@ There are various ways of playing around with the final model to see what it's a
 
 ## User Interface
 
-Most people are not going to open up a Jupyter notebook to figure out what they're going to buy from the grocery store. Consequently, we designed a web interface based that generates suggestions based on both a query and a user history. We used a sentence transformer to convert both the query and the recipe descriptions into vectors, and then assigned to each recipe a weighted score of the query dot product and the SVD dot product.
-
-(add picture)
+Most people are not going to open up a Jupyter notebook to figure out what they're going to buy from the grocery store. Consequently, we designed a web interface that generates suggestions based on both a query and a user history. We used a sentence transformer to convert both the query and the recipe descriptions into vectors, and then assigned to each recipe a weighted score of the query dot product and the SVD dot product.
+![AppPhoto](https://github.com/nhajouji/foodrecs/assets/96888276/bdb39734-51f5-47eb-90c4-3672fe0e80d8)
